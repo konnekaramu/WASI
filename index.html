@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>WASI dialog</title>
+<meta charset="utf-8">
+<link href="css/site.css" rel="stylesheet" />
+<link href="css/animate.css" rel="stylesheet" />
+<link href="css/WASIdia.css" rel="stylesheet" />
+<script src="js/jquery-2.2.3.js"></script>
+<script src="js/WASIdia.js"></script>
+</head>
+<body>
+<div id="WASIdia"></div>
+
+<div class="waRow">
+	<div class="waFormBox">
+		<div><h1>ワシニーのダイアログお試し</h1></div>
+		<hr><br>
+		<div>ダイログのタイトルを入力して下さい</div><br>
+		<div><input type="text" id="getTitle" class="waBox" /></div><br>
+		<div>ダイログのメッセージを入力して下さい</div><br>
+		<div><input type="text" id="getMessage" class="waBox" /></div><br><br>
+		
+		<button onClick="showAlert()" class="waButton">Alert</button>
+		<button onClick="showConfirm()" class="waButton">Confirm</button>
+		<button onClick="showPrompt()" class="waButton">Prompt</button>
+	</div>
+</div>
+<br><br>
+<div class="waRow">
+	<div class="waBox">
+		<div><h1>OPTION</h1></div>
+		<hr><br>
+		<div class="optionbox">
+		
+		<input type="radio" name="animate" value="none" checked> None <br>
+		<input type="radio" name="animate" value="bounce"> Bounce<br>
+		<input type="radio" name="animate" value="flash"> Flash<br>
+		<input type="radio" name="animate" value="pulse"> Pulse<br>
+		<input type="radio" name="animate" value="rubberBand"> RubberBand<br>
+		<input type="radio" name="animate" value="Shake"> Shake<br>
+		<input type="radio" name="animate" value="headShake"> HeadShake<br>
+		<input type="radio" name="animate" value="swing"> Swing<br>
+		<input type="radio" name="animate" value="tada"> Tada<br>
+		<input type="radio" name="animate" value="wobble"> Wobble<br>
+		<input type="radio" name="animate" value="jello"> Jello<br>
+		<input type="radio" name="animate" value="bounceIn"> BounceIn<br>
+		<input type="radio" name="animate" value="bounceInDown"> BounceInDown<br>
+		<input type="radio" name="animate" value="bounceInLeft"> BounceInLeft<br>
+		<input type="radio" name="animate" value="bounceInRight"> BounceInRight<br>
+		<input type="radio" name="animate" value="bounceInUp"> BounceInUp<br>
+		<input type="radio" name="animate" value="bounceOut" disabled> BounceOut<br>
+		<input type="radio" name="animate" value="bounceOutDown" disabled> BounceOutDown<br>
+		<input type="radio" name="animate" value="bounceOutLeft" disabled> BounceOutLeft<br>
+		<input type="radio" name="animate" value="bounceOutRight"disabled> BounceOutRight<br>
+		<input type="radio" name="animate" value="bounceOutUp" disabled> BounceOutUp<br>
+		<input type="radio" name="animate" value="fadeInDown"> FadeInDown<br>
+		<input type="radio" name="animate" value="fadeInDownBig"> FadeInDownBig<br>
+		<input type="radio" name="animate" value="fadeInLeft"> FadeInLeft<br>
+		<input type="radio" name="animate" value="fadeInLeftBig"> FadeInLeftBig<br>
+		
+		</div>
+		<div class="optionbox">
+		
+		<input type="radio" name="animate" value="fadeInRightBig"> FadeInRightBig<br>
+		<input type="radio" name="animate" value="fadeInUp"> FadeInUp<br>
+		<input type="radio" name="animate" value="fadeInUpBig"> FadeInUpBig<br>
+		<input type="radio" name="animate" value="fadeOut" disabled> FadeOut<br>
+		<input type="radio" name="animate" value="fadeOutDown" disabled> FadeOutDown<br>
+		<input type="radio" name="animate" value="fadeOutDownBig" disabled> FadeOutDownBig<br>
+		<input type="radio" name="animate" value="fadeOutLeft" disabled> FadeOutLeft<br>
+		<input type="radio" name="animate" value="fadeOutLeftBig" disabled> FadeOutLeftBig<br>
+		<input type="radio" name="animate" value="fadeOutRight" disabled> FadeOutRight<br>
+		<input type="radio" name="animate" value="fadeOutRightBig" disabled> FadeOutRightBig<br>
+		<input type="radio" name="animate" value="fadeOutUp" disabled> FadeOutUp<br>
+		<input type="radio" name="animate" value="fadeOutUpBig" disabled> FadeOutUpBig<br>
+		<input type="radio" name="animate" value="flip"> Flip<br>
+		<input type="radio" name="animate" value="flipInX"> flipInX<br>
+		<input type="radio" name="animate" value="flipInY"> FlipInY<br>
+		<input type="radio" name="animate" value="flipOutX" disabled> FlipOutX<br>
+		<input type="radio" name="animate" value="flipOutY" disabled> FlipOutY<br>
+		<input type="radio" name="animate" value="lightSpeedIn"> LightSpeedIn<br>
+		<input type="radio" name="animate" value="lightSpeedOut" disabled> LightSpeedOut<br>
+		<input type="radio" name="animate" value="rotateIn"> RotateIn<br>
+		<input type="radio" name="animate" value="rotateInDownLeft"> RotateInDownLeft<br>
+		<input type="radio" name="animate" value="rotateInDownRight"> RotateInDownRight<br>
+		<input type="radio" name="animate" value="rotateInUpLeft"> RotateInUpLeft<br>
+		<input type="radio" name="animate" value="rotateInUpRight"> RotateInUpRight<br>
+		<input type="radio" name="animate" value="rotateOut" disabled> RotateOut<br>
+		
+		</div>
+		<div class="optionbox">
+		
+		<input type="radio" name="animate" value="rotateOutDownLeft" disabled> RotateOutDownLeft<br>
+		<input type="radio" name="animate" value="rotateOutDownRight" disabled> RotateOutDownRight<br>
+		<input type="radio" name="animate" value="rotateOutUpLeft" disabled> RotateOutUpLeft<br>
+		<input type="radio" name="animate" value="rotateOutUpRight" disabled> RotateOutUpRight<br>
+		<input type="radio" name="animate" value="hinge"> Hinge<br>
+		<input type="radio" name="animate" value="jackInTheBox"> JackInTheBox<br>
+		<input type="radio" name="animate" value="rollIn"> RollIn<br>
+		<input type="radio" name="animate" value="rollOut" disabled> RollOut<br>
+		<input type="radio" name="animate" value="zoomIn"> ZoomIn<br>
+		<input type="radio" name="animate" value="zoomInDown"> ZoomInDown<br>
+		<input type="radio" name="animate" value="zoomInLeft"> ZoomInLeft<br>
+		<input type="radio" name="animate" value="zoomInRight"> ZoomInRight<br>
+		<input type="radio" name="animate" value="zoomInUp"> ZoomInUp<br>
+		<input type="radio" name="animate" value="zoomOutDown" disabled> ZoomOutDown<br>
+		<input type="radio" name="animate" value="zoomOutLeft" disabled> ZoomOutLeft<br>
+		<input type="radio" name="animate" value="zoomOutRight" disabled> ZoomOutRight<br>
+		<input type="radio" name="animate" value="zoomOutUp" disabled> ZoomOutUp<br>
+		<input type="radio" name="animate" value="slideInDown"> SlideInDown<br>
+		<input type="radio" name="animate" value="slideInLeft"> SlideInLeft<br>
+		<input type="radio" name="animate" value="slideInRight"> SlideInRight<br>
+		<input type="radio" name="animate" value="slideInUp"> SlideInUp<br>
+		<input type="radio" name="animate" value="slideOutDown" disabled> SlideOutDown<br>
+		<input type="radio" name="animate" value="slideOutLeft" disabled> SlideOutLeft<br>
+		<input type="radio" name="animate" value="slideOutRight" disabled> SlideOutRight<br>
+		<input type="radio" name="animate" value="slideOutUp" disabled> SlideOutUp<br>
+		
+		</div>
+	</div>
+</div>
+</body>
+<script>
+function showAlert(){
+	WASIalert(getText_title(),getText_message(),getAnimate_type());
+}
+function showConfirm(){
+	WASIconfirm(getText_title(),getText_message(),getAnimate_type());
+	OK.click(function(){
+		//Do something when confirmed 
+		WASIalert("Result for your test","Your answer is 'OK'",getAnimate_type());
+	})
+}
+function showPrompt(){
+	WASIprompt(getText_title(),getText_message(),getAnimate_type());
+	var myText="";
+	OK.click(function(){
+		//Get your text and do something when confirmed 
+		myText=TEXT.val();
+		//WASIalert("Result for your test","Your message is '"+myText+"'");
+		WASIprompt("Result for your test","Hello "+myText+" I'm Wasinee. \n How old are you?",getAnimate_type());
+		OK.click(function(){
+			myText=TEXT.val();
+			var tmpText="even if ";
+			if(myText>"24")tmpText+="you older than me";
+			else tmpText+="I older than you";
+			tmpText+=", but let be frind";
+			WASIalert("Result for your test",tmpText,getAnimate_type());
+		});
+	});
+}
+
+function getText_title(){
+	return document.getElementById("getTitle").value;
+}
+function getText_message(){
+	return document.getElementById("getMessage").value;
+}
+function getAnimate_type(){
+	return $('input[name="animate"]:checked').val();
+}
+</script>
+</html>
