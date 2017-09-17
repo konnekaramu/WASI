@@ -1,0 +1,59 @@
+.waRow{
+	width:100%;
+}
+.waCol50{
+	width:50%
+}
+
+.waFormBox{
+	padding:10px;
+	text-align:center;
+	width:60%;
+	min-width:300px;
+	border:2px black solid;
+	box-shadow:1px 1px 3px grey;
+	border-radius:10px;
+	margin:auto;
+	background-color:pink;
+}
+
+.waFormBox div{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.waButton{
+      width:120px;
+      height:24px;
+	  border:none;
+	  text-align:center;
+      background-color:white;
+      color:black;
+      box-shadow:1px 1px 3px grey;
+      border-radius:6px;
+	  font-weight:bold;
+	  font-size:large;
+	  cursor:pointer;
+	  margin:4px;
+	}
+	
+.waButton:hover{
+	box-shadow:1px 1px 3px blue;
+}
+
+.waBox{
+	height:40px;
+	padding:2px;
+	width:80%;
+	border-radius:4px;
+	margin:auto;
+	background-color:blue:
+}
+
+.optionbox{
+	width:33%;
+	float:left;
+	position:static;
+	text-align:left;
+	display:inline;
+}

@@ -1,0 +1,182 @@
+#blackdrop{
+      top:0;
+      left:0;
+      position:fixed;
+      width:100%;
+      height:100%;
+      background-color:black;
+      z-index:996; 
+	  opacity:0.4;
+  }  
+  
+  .wsClose{
+		position:absolute;
+		display:inline-block;
+		top:0px;
+		right:0px;
+		width:32px;
+		height:32px;
+		border:0;
+		border-radius:32px;
+		margin:0;
+		padding:0;
+		transform:scale(0.5);
+		cursor:pointer;
+		opacity:0.6;
+	}
+	.wsClose:before{
+		content:"";
+		position:absolute;
+		display:inline-block;
+		top:4px;
+		left:13px;
+		width:4px;
+		height:24px;
+		margin:0;
+		padding:0;
+		background-color:gray;
+		-moz-transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		transform:rotate(45deg);
+	}
+	.wsClose:after{
+		content:"";
+		position:absolute;
+		display:inline-block;
+		top:4px;
+		left:13px;
+		width:4px;
+		height:24px;
+		margin:0;
+		padding:0;
+		background-color:grey;
+		-moz-transform:rotate(-45deg);
+		-webkit-transform:rotate(-45deg);
+		transform:rotate(-45deg);
+	}
+	.wsClose:hover{
+		opacity:1;
+	}
+
+   .wsButton-area{
+      text-align:center;
+	  position:relative;
+	}
+ 
+   .wsDialog{ 
+	  /*height:auto;*/
+      position:fixed;
+      background-color:white;
+      color:black;
+      box-shadow:1px 1px 3px grey; 
+      border-radius:10px;
+      z-index:9999;
+      padding:2%;
+      /*margin:auto;*/
+	 }
+	 
+   .wsDialog-header{ 
+      width:auto;
+	  font-weight:bold;
+      background-color:white;
+      color:black;
+	  text-align:center;
+      border-radius:10px 10px 0 0;
+	  border-bottom:1px gray solid;
+      padding:10px;
+   }
+      .wsDialog-body{ 
+      width:auto;
+      height:auto;
+	  position:relative;
+	  font-weight:normal;
+      color:black;
+      padding:5%;
+      margin:auto;
+	  display: inline-block;
+   }
+ 
+	.wsButton{
+	  border:none;
+	  text-align:center;
+      background-color:white;
+      color:black;
+      box-shadow:1px 1px 3px grey;
+      border-radius:6px;
+	  font-weight:bold;
+	  cursor:pointer;
+	  margin:4px;
+	}
+	
+	.wsButton-OK:hover{
+      color:green;
+	  box-shadow:1px 1px 3px green;
+	}
+	
+	.wsButton-cancle:hover{
+      color:red;
+	  box-shadow:1px 1px 3px red;
+	}
+	
+	.wsBox{
+	height:40px;
+	padding:2px;
+	width:80%;
+	border-radius:4px;
+	margin:auto;
+}
+
+@media screen and (min-width:991px){
+       .wsDialog{ 
+      width:50%;
+      left: 50%;  
+      margin-left:-25%;
+	  top:40%;
+  }
+  .wsButton{
+	  width:80px;
+	  height:26px;
+  }
+  .wsDialog-header{ 
+	height:10%;
+	font-size:x-large;
+  }
+  .wsDialog-body{ 
+	font-size:large;
+  }
+  .wsButton{
+	  font-size:large;
+  }
+}
+
+  @media screen and (max-width:990px){
+       .wsDialog{
+      width:80%;
+      left: 50%;
+	  margin-left:-40%;
+	  top:40%;
+  }
+  .wsButton{
+	  width:25%;
+	  height:20%;
+  }
+   .wsDialog-header{ 
+	height:20%;
+	font-size:40px;
+  }
+  .wsDialog-body{ 
+	font-size:32px;
+  }
+  .wsButton{
+	  font-size:40px;
+  }
+
+}  
+
+
+body.noscroll
+{
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
