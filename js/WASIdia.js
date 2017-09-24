@@ -1,3 +1,10 @@
+/*!
+ * WASIdia.js -http://github.com/konnekaramu/WASI
+ * Version - Beta 0.1
+ *
+ * Author: Wasinee
+ */
+
 var target=null;
 var dialogBody="";
 var OK=null;
